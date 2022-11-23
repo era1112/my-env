@@ -1,0 +1,9 @@
+make zsh the default shell
+install omp with this guide https://ohmyposh.dev/docs/installation/linux
+font: robotomono
+theme: clean-detailed
+
+install w/ apt
+    zsh-autosuggestions 
+    zsh-syntax-highlighting 
+    zsh-autocomplete.
