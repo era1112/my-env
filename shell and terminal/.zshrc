@@ -1,7 +1,11 @@
 # Greeting
-# echo "Welcome to Parrot OS"
+# echo "greetings"
 
-eval "$(oh-my-posh init zsh)" 
+##########################################
+## Invoke omp with Theme
+##########################################
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/clean-detailed.omp.json)"
+
 # Prompt
 PROMPT="%F{red}┌[%f%F{cyan}%m%f%F{red}]─[%f%F{yellow}%D{%H:%M-%d/%m}%f%F{red}]─[%f%F{magenta}%d%f%F{red}]%f"$'\n'"%F{red}└╼%f%F{green}$USER%f%F{yellow}$%f"
 # Export PATH$
@@ -51,7 +55,7 @@ if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
 fi
 
 if [ -f /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]; then
-  # source /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+  source /usr/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
   # Select all suggestion instead of top on result only
   zstyle ':autocomplete:tab:*' insert-unambiguous yes
   zstyle ':autocomplete:tab:*' widget-style menu-select
@@ -73,6 +77,8 @@ setopt appendhistory
 echo -en "\e]2;Parrot Terminal\a"
 preexec () { print -Pn "\e]0;$1 - Parrot Terminal\a" }
 
-eval "$(oh-my-posh init zsh)"
-
-
+# Navigation keybinds
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^H" backward-kill-word
+bindkey "^[[3;5~" kill-word
