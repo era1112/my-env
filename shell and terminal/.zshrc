@@ -4,7 +4,7 @@
 ##########################################
 ## Invoke omp with Theme
 ##########################################
-eval "$(oh-my-posh init zsh --config ~/.poshthemes/clean-detailed.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.poshthemes/powerlevel10k_rainbow.omp.json)"
 
 # Prompt
 PROMPT="%F{red}┌[%f%F{cyan}%m%f%F{red}]─[%f%F{yellow}%D{%H:%M-%d/%m}%f%F{red}]─[%f%F{magenta}%d%f%F{red}]%f"$'\n'"%F{red}└╼%f%F{green}$USER%f%F{yellow}$%f"
