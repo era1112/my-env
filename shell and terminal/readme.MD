@@ -3,6 +3,7 @@ Shell
 - zsh-autosuggestions 
 - zsh-syntax-highlighting 
 - zsh-autocomplete.
+- check for inclusions from this repo's .zshrc
 
 Terminal Appearance
 - install omp with this guide https://ohmyposh.dev/docs/installation/linux
