@@ -27,9 +27,8 @@ function rot13()
   echo "$@" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 }
 
-# alias
-alias ls='ls -lh --color=auto'
-alias la='ls -lah --color=auto'
+# aliases
+alias la='ls -laF --color=auto'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
