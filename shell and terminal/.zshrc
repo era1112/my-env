@@ -29,12 +29,13 @@ function rot13()
 
 # aliases
 alias la='ls -laF --color=auto'
+alias tone='paplay /usr/share/sounds/sound-icons/start'
+alias fp='featherpad'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias tone='paplay /usr/share/sounds/sound-icons/start'
 
 #####################################################
 # Auto completion / suggestion
