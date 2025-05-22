@@ -14,3 +14,4 @@ Terminal Appearance
 - verbose path expansion: was line 105, add "style": "agnoster_full"
 
 Hyprland
+- https://wiki.hyprland.org/Getting-Started/Installation/
