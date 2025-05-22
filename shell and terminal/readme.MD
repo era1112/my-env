@@ -12,3 +12,5 @@ Terminal Appearance
 - theme deviations:
 - change leading heart: was line 92, change char to f1e2
 - verbose path expansion: was line 105, add "style": "agnoster_full"
+
+Hyprland
