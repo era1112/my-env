@@ -2,11 +2,17 @@ NTML Recon (scans for http endpoints)
 rg (rust-based grep)
 thc-hydra
 PTF (distro)
-Statistically Likely Usernames
-ADExplorer (sysinternals)
-GetADUsers.py (Impacket)
-weakpasswords.net (includes current-date vars)
-best66.rule (hc)
+
+Passwords
+  weakpasswords.net (includes current-date vars)
+  best66.rule (hc)
+  Statistically Likely Usernames
+
+AD
+  ADExplorer (sysinternals)
+  Certify
+  Certipy
+  GetADUsers.py (Impacket)
 
 Windows code execution:
   RDP
