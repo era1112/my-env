@@ -3,6 +3,8 @@ rg (rust-based grep)
 thc-hydra
 PTF (distro)
 
+dnsrecon
+
 Passwords
   weakpasswords.net (includes current-date vars)
   best66.rule (hc)
