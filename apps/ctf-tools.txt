@@ -38,6 +38,7 @@ OSINT
   shodan.io
   hunter.io
   GatherContacts (scrape of linkedin scrapes)
+  site:linkedin.com/in "tgt name"
 
 breaches
   HaveIBeenPwned.com
