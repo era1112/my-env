@@ -24,3 +24,6 @@ Kerberos:
   Rubeus
   Impacket
   Mimikatz
+
+Common sub-hosts
+  vpn, access, ctx, citrix, storefront, mail, autodiscover, owa, login, portal, sso, adfs, remote
