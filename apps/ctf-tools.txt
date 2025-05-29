@@ -7,6 +7,13 @@ ADExplorer (sysinternals)
 GetADUsers.py (Impacket)
 weakpasswords.net (includes current-date vars)
 best66.rule (hc)
+
+Windows code execution:
+  RDP
+  wmic.exe
+  PsExec.exe
+  *exec.py (impacket)
+
 Kerberos:
   Rubeus
   Impacket
