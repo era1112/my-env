@@ -7,3 +7,7 @@ ADExplorer (sysinternals)
 GetADUsers.py (Impacket)
 weakpasswords.net (includes current-date vars)
 best66.rule (hc)
+Kerberos:
+  Rubeus
+  Impacket
+  Mimikatz
