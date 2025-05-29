@@ -44,4 +44,11 @@ breaches
   HaveIBeenPwned.com
   Dehashed.com
   intelx.io
-  archive.org (collections 1-5)
+  archive.org (collections 1-5, twitter)
+
+Appliance correlation
+  favicon
+  SSH host key
+
+Email
+  anymailfinder.com
