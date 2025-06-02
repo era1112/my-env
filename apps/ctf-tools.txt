@@ -49,7 +49,9 @@ breaches
 Appliance correlation
   favicon
   SSH host key
-  Eyewitness
-
+  
 Email
   anymailfinder.com
+
+Scraping
+  Eyewitness
