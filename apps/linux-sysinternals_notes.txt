@@ -1,0 +1,5 @@
+routing stack
+  Ubuntu/Debian: netfilter (kernel module) -> iptables (and arptables, ebtables, ip6tables) -> ufw 
+  RHEL: nftables (nft) -> firewalld 
+  BSD: pf (kernel) -> pfctl
+  Also sometimes: iptables-persistent
