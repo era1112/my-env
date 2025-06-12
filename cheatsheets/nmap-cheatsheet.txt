@@ -3,3 +3,35 @@ Very modular:
 
 Reasonable defaults:
   -oA basename [stores in normal, greppable, and XML]
+  --dns-servers 8.8.8.8 [makes it faster if explicit]
+
+Default probing (per host):
+  - ICMP echo
+  - ICMP time req
+  - TCP SYN 443
+  - TCP ACK 80
+  - ARP (if on same subnet)
+  ** Will not scan a host that doesn't respond to any of these **
+  Disable with -Pn
+
+Other opts:
+  -A maximal os fingerprinting and tracing
+  -O OS fingerprinting (primitive based on TTL telltales)
+  --open [only show open ports]
+  --defeat-icmp-ratelimit [speeds UDP scan by not waiting for unresponsive ports]
+  -F [top100 ports]
+  -n/-R: Never do DNS resolution/Always resolve [default: sometimes]
+  -p n-m [scan port n-m]
+  -p T: , U: [tcp or udp]
+  -PS 1,2,3 [specify additional ports]
+  -sL [don't scan, just list hosts]
+  -sT [TCP connect and reset scan]
+  -sS [default scan, leave half open cnx]
+  -sV [version scan, based on fingerprints] [v useful]
+  -T<0-5>: Set timing template (higher is faster)
+  -- traceroute
+  --top-ports n [top n ports according to /usr/share/nmap/nmap-services]
+  -v/v/d/dd [verbosity/debug]
+  
+  
+Time ests:
