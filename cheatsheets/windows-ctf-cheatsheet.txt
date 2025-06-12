@@ -1,0 +1,2 @@
+Turn off win firewall
+    netsh Advfirewall set allprofiles state off

@@ -14,7 +14,9 @@ First xx lines (default is 10)
   head -n xx tgt.txt
 
 grep
-  grep -w string /in/this/file
+  grep string /in/this/file
+  -w ["whole word" matching only]
+  grep -e any -e of -e these /in/this/file
 
 head (print the first x lines (default 10))
   head raw.txt

@@ -1,0 +1,5 @@
+Opts
+    -f URL/of/file
+    -x file.xml [takes nmap or nesses .xml as input]
+    --single url [captures screenshot, follows redirects]
+    --web
