@@ -1,0 +1,7 @@
+hcxdumptool -i wlx00c0caae5e03 --enable_status=64 -o ~/output/27nov/activebeacon_hcxdumptool.pcapng
+
+i: interface; enable_status=64: show internal status 1 per min; o:output file
+
+hcxpcapngtool -E wordlist_out.txt -m 22000 -o test_out.22000 test.pcapng
+
+E: output file for wordlist; m: mode (22000 is hc psk); o:output pmkid file

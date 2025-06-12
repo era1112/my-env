@@ -1,0 +1,2 @@
+# just unzip it (x=extract, v=verbose, z=gzip mode, f=targeted file)
+tar -xvzf target.tar.gz

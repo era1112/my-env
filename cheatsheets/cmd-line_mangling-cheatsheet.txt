@@ -1,0 +1,42 @@
+sort
+  cat raw.txt | sort
+    -u [unique rows]
+    -n numerical sort (iw, 2 > 11)
+    -V natural sort (ie, 2 < 11)
+    by default:
+    By default, the GNU sort command applies lexicographic (alphabetical) order based on the current locale's collating rules. This means:
+    It sorts lines character by character, following the order defined by the locale.
+    If no sorting keys are specified, it considers the entire line as the sorting key.
+    Numbers are treated as strings, so "11" comes before "2" (because "1" is smaller than "2" in ASCII order)
+
+grep
+  grep -w string /in/this/file
+
+wc (count lines in file)
+  cat raw.txt | wc -l
+
+head (print the first x lines (default 10))
+  head raw.txt
+
+nested diff
+  diff <(head ./file1) <(head ./file2)
+
+awk (pattern scanning)
+  cat input.txt | awk '{print $4}' [split the content using whitespace (default delimiter), return the 4th element]
+
+cut (remove portions of a file)
+  cut -d '/' -f 1 [uses '/' as the delimiter, extracts field 1]
+
+tr (translate/delete chars)
+  cat input.txt | tr 'a' 'A' [replaces a with A]
+  cat input.txt | tr '\n' ',' [replaces newlines with commas]
+
+sed ("stream editor")
+  cat input.txt | sed 's/,$//' [this removes trailing commas on every line. idfk...]
+
+output redirection
+  cat input.txt > output.txt [overwrites]
+  cat input.txt >> output.txt [appends]
+  cat input.txt 2> errors.txt [redirect stderr and overwrite]
+  cat input.txt &>> log.txt [redirect stdout and stderr, and append]
+  wc -l < input.txt [takes input.txt as input, useful for reordering parsing flows]

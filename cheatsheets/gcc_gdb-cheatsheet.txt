@@ -1,0 +1,10 @@
+## G++
+	g++ file1 file2 -o output-binary
+-Ox: optimizer level
+-D:  add preprocessor flag (ie. -DEBUG)
+
+## GDB: 
+- compile it with -g
+- run the debugger:
+	gdb --args path/to/app <app params>
+	> run

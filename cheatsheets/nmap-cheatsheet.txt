@@ -1,0 +1,5 @@
+Very modular:
+  nmap --option1 --option2 --optionN host.to.scan
+
+Reasonable defaults:
+  -oA basename [stores in normal, greppable, and XML]

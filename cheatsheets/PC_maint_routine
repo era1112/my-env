@@ -1,0 +1,61 @@
+LOOK FOR OLD/CACHE STUFF TO DELETE
+===================================
+[X]	add/remove programs list
+    [X] Check for excessive .NET packages, VC++ distros, HP, MS, nVidia non-essentials 
+[X] windows "disk cleanup"
+[X]	windirstat (look for large files, Appdata bloat, etc)
+[X] startup items (from ctrl+shift+esc menu, and settings app)
+[X] check on win firewall allowed apps
+[X] system scan for any relics of "logmein" (from exam proctoring)
+[X] Check USBDeview for anything abnormal
+[X] Check ncpa.cpl for anything unusual
+[X] Check PATH for anything unusual
+[X] Check windows users list
+[X] Check AD users and permissions
+[X] Check defender exclusion lists and history
+
+UPDATE SYSTEM STUFF
+====================
+[X]	good solid reboot [shutdown /s /f /t 00]
+[X]	windows update
+[X]	hp update (hp support assist app)
+[X]	gpu update (nvidia app)
+[X]	platform hw update (intel driver & support app)
+[X]	igpu update (intel graphics software app)
+[X]	update steam
+[X] Windows health wizard: Dism.exe /online /cleanup-image /restorehealth
+[X] Windows disk health wizard: Sfc /scannow
+
+ADD NEW SOFTWARE
+================
+[x] If you have new apps/games, install them here 
+
+SCAN PC
+=======
+[X] scandisk ("error checking" in drive properties)
+[X] defrag ("optimize and defragment drive" in drive properties)
+[X] rkill
+[x] malwarebytes complete scan
+[X] win defender complete scan
+[X] adwcleaner
+[X] hitman
+[X] hwinfo64, check temperatures are normal under load
+
+RINSE AND REPEAT
+================
+[x] repeat everything 1 more time from the "update" and "scan" lists
+
+UNINSTALL TOOLS THAT DONT NEED TO BE PERSISTENT
+============================================
+[X] Malwarebytes
+[X] rkill
+[X] adwcleaner
+[X] hitman
+
+BACKUP
+======
+[]	push image to redorescue 
+
+LOG
+===
+20250511  Games

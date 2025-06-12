@@ -1,0 +1,15 @@
+## Show all active aliases
+  alias
+
+## Make temp alias (non-persistent)
+  alias new='old'
+
+## Make permanent alias
+  Depends on your shell
+  If bash, check ~/.bashrc
+
+## Remove alias
+  unalias aliasname
+
+## Kill em all
+  unalias -a

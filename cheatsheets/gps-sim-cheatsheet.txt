@@ -1,0 +1,23 @@
+./gps-sdr-sim -e ./rinex/* -b 8 -l 0,0,200 -o ./tapes/output.bin -v -s 2600000 -d 7200 -T 2021/02/23,20:34:00
+
+e: path to rinex from nasa (update every 24hrs); b:i/q format (hackrf one takes 8);l: static lat/long mode;o: output rinex tape;v: verbose info;s:sampling rate (hz);t:tape start time;T:change toe/toc to tape start time
+
+hackrf_transfer -t tape_paf.bin -f 1575420000 -s 2600000 -a 1 -x 47 
+
+t:input file;f:freq in hz;s: sample rate in hz;a:amp enabled;x:gain
+
+./gps-sim -e rinex/*.23n -l 0,9,200 -s now -g 47 -a -d 1800 -v -i -r hackrf --disable-almanac
+
+e: rinex input;l:lat/long for static mode;s:start time;g:gain;a:amp;d:duration in secs;v:verbose output;i:interactive;r:radio type;
+
+-----
+
+https://github.com/osqzss/gps-sdr-sim
+
+https://github.com/Mictronics/multi-sdr-gps-sim
+
+-----
+
+https://cddis.nasa.gov/archive/gnss/data/daily/2023/116/23n/
+
+https://kaitlyn.guru/projects/spoofing-gps-with-an-sdr/

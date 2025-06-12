@@ -1,0 +1,6 @@
+- rockyou + common ruleset (22000 is PKMID+EAPOL, w3 is optimizations)
+sudo hashcat -m 22000 -w 3 -o ~/output/27nov/hc_out.txt ~/output/27nov/nighttime.hc22000 /tmp/wordlist -r /usr/share/hashcat/rules/best64.rule --session nighttime; longtone; python3 ~/Documents/telethon/telethonMsg.py 'cracking complete';
+
+- bruteforce 8 chars
+sudo hashcat -m 16800 -w 3 -o ./file.txt  ~/output/27nov/pmkiddump.16800 -a 3 -1 '?l' '?1?1?1?1?1?1?1?1';longtone
+

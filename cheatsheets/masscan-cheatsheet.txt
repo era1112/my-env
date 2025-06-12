@@ -1,0 +1,9 @@
+Preps:
+  Create iptables black hole to prevent kernel from spamming RST's when SYN-ACKs roll in
+    sudo iptables -A INPUT -p tcp --dport 55555 -j DROP
+
+Scan:
+  sudo masscan --ports 1,2,3-5 --rate 15000 --src-port=55555 -oB /tmp/local.massscan 1.1.1.1 (tgt host)
+
+Convert to XML:
+  masscan --readscan /path/to/input.bin -oX /path/to/output.xml

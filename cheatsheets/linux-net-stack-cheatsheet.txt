@@ -1,0 +1,29 @@
+some examples of the same shit:
+===============================
+$  iptables -A INPUT -p tcp --dport 80 -j DROP
+$  nft add rule ip filter input tcp dport 80 drop
+$  ufw deny 80/tcp
+$  echo "block in on eth0 proto tcp from any to any port 80" | sudo pfctl -f -
+
+
+iptables (and similar on arptables, ebtables, ip6tables, etc)
+================================================================
+iptables -L (list rules in chain) -v -n --line-numbers
+
+iptables -A (append to chain) INPUT, OUTPUT, FORWARD (default chains, INPUT means inbound to the host) (matching criteria) -j DROP (behavior to Jump to)
+
+UFW
+===
+ufw show status
+ufw show added
+ufw app list
+
+nft
+===
+nft list ruleset
+
+pf
+==
+pfctl -sr
+pfctl -vvsr
+pfctl -sa

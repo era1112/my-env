@@ -1,0 +1,23 @@
+- make ssh key with ssh-keygen
+	ssh-keygen -t ed25519 -C "your_email@example.com"
+	
+- add key to github keyring
+	from ~/.ssh/xxx.pub
+	
+- make pwd a repo
+	git init
+	
+- configure remotes
+	git remote add origin <SSH-URL>
+	git remote -v	# verifies remotes
+
+- clone
+	git clone <URL>
+
+- check for currency
+	git remote show origin
+	
+- add/commit/push
+	git add ./*
+	git commit -m "message"
+	git push origin master	# if branch is named master

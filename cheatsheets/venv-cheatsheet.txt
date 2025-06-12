@@ -1,0 +1,15 @@
+1) Set up venv
+
+  python -m venv .venv-proj
+
+2) Activate venv
+
+   source .venv-proj/bin/activate 
+
+3) Customize environment
+
+4) Do shits
+
+5) Deactivate venv, enjoy your non-destroyed base environment
+
+  deactivate

@@ -1,0 +1,6 @@
+## Valid ones
+
+chmod u+rwx file
+chmod o-rwx file
+chmod u=rwx file
+chmod +x file

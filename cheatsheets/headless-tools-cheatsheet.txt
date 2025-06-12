@@ -1,0 +1,16 @@
+screen
+	run and detach
+		screen -dmS [session name] [command]
+		
+	reattach
+		screen -r [session name]
+		
+	detach from attached
+		ctrl+ad
+
+bash
+	Run and detach
+		command &
+
+	Run and detach and deny all to stdout
+		command &>/dev/null &

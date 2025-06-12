@@ -1,0 +1,16 @@
+# compile it with afl
+	export LLVM_CONFIG="llvm-config-11"
+	CC=afl-clang-lto		## or whatever supported compiler variant. afl-clang-lto/++ prefered -> afl-clang-fast -> afl-gcc-fast -> afl-gcc/clang
+	
+
+# fuzz it
+# everything after -- is the tgt command. The @@ stands in for the corpus files
+	afl-fuzz -i corpus-dir/ -o output-dir/ -s <random seed int> -- path/to/tgt-binary @@ <tgt-bins-cli-params>
+
+# parallel is better. 
+	check number of useful cores with afl-gotcpu. leave a free core for the system
+	make a sync dir
+	run one master process with: -M tag01
+	then run slave processes with: -S tag0x
+	use screen to manage all the processes
+	use afl-whatsup to monitor

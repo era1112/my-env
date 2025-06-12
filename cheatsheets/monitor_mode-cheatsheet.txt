@@ -1,0 +1,16 @@
+airmon-ng check kill
+ifconfig $interface down
+iwconfig $interface mode monitor
+ifconfig $interface up
+
+
+
+ifconfig $interface down
+iwconfig $interface mode managed
+ifconfig $interface up
+sudo service networking restart
+sudo service NetworkManager restart
+
+
+
+
