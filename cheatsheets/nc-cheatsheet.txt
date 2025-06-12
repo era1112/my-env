@@ -1,0 +1,15 @@
+Demo with pipes
+    nc -l -p 1 -v [listen on port 1]
+    nc -v host 1 [open session on port 1]
+
+Harvest banners:
+    echo "" | nc -nvw2 1.2.3.4 p1-pn [echo"" closes the connection and w2 prevents long rst waits]
+
+Data transfer
+    nc -nvpl portn -q 1 < /file/path [listen and send-on-connect]
+    nc -v 1.2.3.4 portn > /file/path [establish cnx and receive]
+
+Opts
+    -l [listen only]
+    -n [no DNS]
+    -z [listen only, do not allow connections]
