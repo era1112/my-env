@@ -26,6 +26,10 @@ DNS
 Email
   anymailfinder.com
 
+Exploits
+  metasploit
+  linPEASS (includes linux exploit suggester)
+
 Kerberos:
   Rubeus
   Impacket

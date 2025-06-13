@@ -1,0 +1,7 @@
+"Reverse": Calls home and grabs stage
+"Bind": Listens and waits
+
+meterpreter:
+    cd vs lcd (lcd is attacker host)
+    tools: keyscan, screenshot, idletime
+    load -l: show all modules
