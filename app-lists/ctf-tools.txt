@@ -1,0 +1,74 @@
+AD
+  ADExplorer (sysinternals)
+  Bloodhound
+  Certify
+  Certipy
+  GetADUsers.py (Impacket)
+
+Appliance correlation
+  favicon
+  SSH host key
+  
+breaches
+  HaveIBeenPwned.com
+  Dehashed.com
+  intelx.io
+  archive.org (collections 1-5, twitter)
+
+Common sub-hosts
+  vpn, access, ctx, citrix, storefront, mail, autodiscover, owa, login, portal, sso, adfs, remote
+
+DNS
+  dig
+  dnsrecon
+  dnsdumpster.com
+
+Email
+  anymailfinder.com
+
+Kerberos:
+  Rubeus
+  Impacket
+  Mimikatz
+
+Others
+  NTML Recon (scans for http endpoints)
+  rg (rust-based grep)
+  PTF (distro)
+
+OSINT
+  arin/ripe/afrinic/etc
+  crt.sh (CTL's)
+  shodan.io
+  hunter.io
+  GatherContacts (scrape of linkedin scrapes)
+  site:linkedin.com/in "tgt name"
+
+Passwords
+  weakpasswords.net (includes current-date vars)
+  best66.rule (hc)
+  Statistically Likely Usernames
+  pw-inspector (trim wordlists)
+  thc-hydra
+  legba
+  ncrack
+  patator
+  msf
+
+Scanning
+  massscan
+  nmap
+
+Scraping
+  Eyewitness
+
+Windows code execution:
+  RDP
+  wmic.exe
+  PsExec.exe
+  *exec.py (impacket)
+
+World flows
+  geotraceroute.com
+  bgp.tools
+  bgpmap.sdv.fr

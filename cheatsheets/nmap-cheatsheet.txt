@@ -24,6 +24,7 @@ Other opts:
   -n/-R: Never do DNS resolution/Always resolve [default: sometimes]
   -p n-m [scan port n-m]
   -p T: , U: [tcp or udp]
+  -Pn [skip host discovery, assume all up]
   -PS 1,2,3 [specify additional ports]
   -sL [don't scan, just list hosts]
   -sT [TCP connect and reset scan]

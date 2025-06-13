@@ -1,0 +1,14 @@
+Specify targets:
+    -M targets.txt hostname servicename
+
+Creds:
+    -l single [or] -L list.txt
+    -p single [or] -P list.txt
+    -C credfile.txt [u:p format]
+    -m workgroup:{DOMAINNAME} [specifies domain, "workgroup" is just the option name. Without this, it only searches for local (not domain) accts]
+
+Others:
+    -t n [n parallel tasks. 16 is default, 4 is cautious]
+
+Example:
+    thc -L users.txt -P pw.txt host:port proto

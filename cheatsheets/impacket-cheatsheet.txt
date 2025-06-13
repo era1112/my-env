@@ -1,0 +1,2 @@
+Find AD users:
+    GetADUsers.py site/U:P -dc-ip 1.2.3.4 -all ["all" means all scripts known]

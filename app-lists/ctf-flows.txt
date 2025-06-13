@@ -1,0 +1,34 @@
+Recon
+    dnsrecon on hostnames
+    mx records
+    search for ptr's in arin range
+    masscan (live hosts) -> nmap/nc -> NSE scripts (version determination)
+    scrape with eyewitness
+
+Resource Dev
+
+Initial access
+    password guessing w/ hydra
+
+Execution
+
+Persistence
+
+Priv Escalation
+
+Defense Evasion
+
+Credential access
+
+Discovery
+    username discovery thru DC
+
+Lat mov't
+
+Collection
+
+C2
+
+Exfil
+
+Impact
