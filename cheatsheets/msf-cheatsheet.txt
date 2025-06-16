@@ -1,7 +1,15 @@
-"Reverse": Calls home and grabs stage
-"Bind": Listens and waits
+Gotchas:
+    "Reverse": Calls home and grabs stage
+    "Bind": Listens and waits
+    Handle windows slashes like: 'c:\'
 
 meterpreter:
     cd vs lcd (lcd is attacker host)
     tools: keyscan, screenshot, idletime
     load -l: show all modules
+
+Flow:
+    set exploit (access method)
+    set payload (c2 method)
+    set options (RHOST = victim host)
+    run

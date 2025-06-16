@@ -59,6 +59,10 @@ Passwords
   patator
   msf
 
+Payloads
+  Sharp Collection
+  Lolbas (https://lolbas-project.github.io/)
+
 Scanning
   massscan
   nmap
