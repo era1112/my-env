@@ -1,0 +1,5 @@
+Groups: system, user, remote, chrome, slack, misc, all
+Cmds: Antivirus, InstalledProducts, TcpConnections
+
+Others:
+    Seatbelt -q | findstr + [finds cmds that can run remotely]

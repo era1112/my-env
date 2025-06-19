@@ -10,16 +10,27 @@
 Resource Dev
 
 Initial access
-    password guessing w/ hydra
+    password guessing/cracking/spraying
     "exploitation"
+    gtfobins
+    5 ways:
+        exploit public services
+        log into public services
+        Phishing for code execution
+        Connect rogue device
+        Supply chain
 
 Execution
+    Server-side (tester initiates session) or Client-side (subject initiates session)
 
 Situational Awareness
 
 Persistence
 
 Priv Escalation
+    Win:
+        dll search order hijack
+        unattended install files
 
 Defense Evasion
 
@@ -31,14 +42,6 @@ Discovery
 Lat mov't
 
 Collection
-    netstat -name
-    arp -a
-    ipconfig /displaydns
-    ss -t
-    /etc/passwd
-    /etc/group
-    set
-    %PATH
 
 C2
 

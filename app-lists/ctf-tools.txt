@@ -18,6 +18,11 @@ breaches
 Common sub-hosts
   vpn, access, ctx, citrix, storefront, mail, autodiscover, owa, login, portal, sso, adfs, remote
 
+C2  
+  C2 Matrix
+  sliver
+  msf
+
 DNS
   dig
   dnsrecon
@@ -29,6 +34,7 @@ Email
 Exploits
   metasploit
   linPEASS (includes linux exploit suggester)
+  searchsploit
 
 Kerberos:
   Rubeus
@@ -62,6 +68,7 @@ Passwords
 Payloads
   Sharp Collection
   Lolbas (https://lolbas-project.github.io/)
+  lnk, pe/dll, vba/dde/office
 
 Scanning
   massscan
@@ -69,6 +76,7 @@ Scanning
 
 Scraping
   Eyewitness
+  Powerview (Powersploit)
 
 Windows code execution:
   RDP
@@ -80,3 +88,6 @@ World flows
   geotraceroute.com
   bgp.tools
   bgpmap.sdv.fr
+
+AV/EDR Evasion 
+  chameleon
