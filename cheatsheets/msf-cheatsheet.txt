@@ -13,3 +13,6 @@ Flow:
     set payload (c2 method)
     set options (RHOST = victim host)
     run
+
+Also:
+    genisoimage

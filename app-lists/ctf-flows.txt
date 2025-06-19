@@ -1,4 +1,6 @@
-Recon
+*** Update per section ***
+
+
     dnsrecon on hostnames
     mx records
     search for ptr's in arin range
@@ -9,8 +11,11 @@ Resource Dev
 
 Initial access
     password guessing w/ hydra
+    "exploitation"
 
 Execution
+
+Situational Awareness
 
 Persistence
 
@@ -26,9 +31,23 @@ Discovery
 Lat mov't
 
 Collection
+    netstat -name
+    arp -a
+    ipconfig /displaydns
+    ss -t
+    /etc/passwd
+    /etc/group
+    set
+    %PATH
 
 C2
 
-Exfil
+Exfiltration (of data)
+    HTTP(S)
+    SCP
+    FTP
+    SSH
+    TFTP
+    cat | gzip | base64 -> copy; echo "paste" -> | base64 -d | gzip -d > done.file
 
 Impact
