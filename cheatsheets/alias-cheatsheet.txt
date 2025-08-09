@@ -1,6 +1,3 @@
-LINUX
-======
-
 ## Show all active aliases
   alias
 
@@ -18,15 +15,3 @@ LINUX
   unalias -a
 
 
-
-WINDOWS
-=======
-
-## Set
-Set-Alias -Name which -Value Get-Command
-
-## List
-Alias
-
-## Find
-Get-Alias -Name theAliasName

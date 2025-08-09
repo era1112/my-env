@@ -1,0 +1,31 @@
+[alias]
+
+  Set
+    Set-Alias -Name which -Value Get-Command
+    
+    Set-Alias aliasName targetName
+
+  List
+    Alias
+
+  Find (based on alias name)
+      Get-Alias theAliasName
+      Get-Alias -Name theAliasName
+      Get-Alias -Definition theTargetName
+
+[wc]
+  wc -l
+    Get-Content file | Measure-Object -Line
+
+  wc -w
+    Get-Content file | Measure-Object -Word
+
+  wc -m
+    Get-Content file | Measure-Object -Character
+
+  wc -L file
+    Get-Content file | Measure-Object -Maximum -Property Length
+
+[which]
+  Get-Command
+

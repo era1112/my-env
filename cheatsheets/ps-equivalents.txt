@@ -1,2 +1,0 @@
-Which
-  Get-Command
