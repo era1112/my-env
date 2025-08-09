@@ -83,6 +83,8 @@ Windows code execution:
   wmic.exe
   PsExec.exe
   *exec.py (impacket)
+  powerup/invoke-allchecks
+  powersploit/write-servicebinary
 
 World flows
   geotraceroute.com
