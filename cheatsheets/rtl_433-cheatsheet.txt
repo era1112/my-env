@@ -1,4 +1,4 @@
-#!/bin/bash
+# #!/bin/bash ## Uncomment and rename to .sh to make it a handy script
 
 # Sample rate is default (1M). Seems to have the best performance.
 # Used on rtl-sdr w/ pctel low-pro 4g antenna

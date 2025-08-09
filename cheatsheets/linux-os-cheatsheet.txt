@@ -8,3 +8,10 @@ Show which DE:
 Show which WM
   ls -l /etc/alternatives/x-window-manager
 
+
+First xx lines (default is 10)
+  head -n xx tgt.txt
+
+Line count
+  wc -l tgt.txt
+PS: Get-Content tgt.txt | Measure-Object -Line

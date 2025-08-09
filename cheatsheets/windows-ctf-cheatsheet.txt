@@ -1,2 +1,10 @@
 Turn off win firewall
     netsh Advfirewall set allprofiles state off
+
+Tools
+	gh/UACME
+	beroot
+	watson
+	powerup
+	gtfobins
+	lolbas  

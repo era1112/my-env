@@ -52,6 +52,11 @@ UNINSTALL TOOLS THAT DONT NEED TO BE PERSISTENT
 [X] adwcleaner
 [X] hitman
 
+FURTHER ACTION
+==============
+[] Revert to backup, run list from top
+[] Rebuild by hand, run list from top
+
 BACKUP
 ======
 []	push image to redorescue 
