@@ -1,0 +1,12 @@
+mk1 use:
+
+Survey:
+    bloodhound-python -d domain.com -u user -p pass -c All -ns 1.2.3.4 (c doesnt scan for kereberos by default)
+
+    rusthound -d domain.com -u user -p pass -f dc.fqdn.com -z (z outputs to zip)    
+
+Analyze
+    sudo systemctlstart neo4j (Run neo4j db service)
+    Bloodhound --no-sandbox
+    upload json and zip outputs
+    pathfinder to find paths to/from different users and groups

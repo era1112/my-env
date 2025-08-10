@@ -56,6 +56,9 @@ OSINT
 
 Passwords
   weakpasswords.net (includes current-date vars)
+  sponge
+  crackstation.net
+  wiki.skullsecurity.org/Passwords
   best66.rule (hc)
   Statistically Likely Usernames
   pw-inspector (trim wordlists)
