@@ -1,0 +1,21 @@
+Create $profile
+===============
+Check if its there:
+  Test-Path $PROFILE
+
+If not, make it (defaults to Users\~\Documents\WindowsPowerShell):
+  New-Item -ItemType Directory -Path (Split-Path $PROFILE) -Force
+  New-Item -ItemType File -Path $PROFILE -Force
+
+Stuff to add:
+==============
+
+# Use which like linux
+Set-Alias -Name which -Value Get-Command
+
+# salm:triple-chime
+# remember, echo ctrl-g is a single chime
+function salm{1..3|%{[System.Media.SystemSounds]::Exclamation.Play();Start-Sleep 1}}
+
+# lalm: perpetual chime
+function lalm{while($true){[System.Media.SystemSounds]::Exclamation.Play();Start-Sleep 1}}
