@@ -1,17 +1,12 @@
-*** Update per section ***
-
-
-    dnsrecon on hostnames
+Resource Dev
     mx records
     search for ptr's in arin range
     masscan (live hosts) -> nmap/nc -> NSE scripts (version determination)
     scrape with eyewitness
-
-Resource Dev
+    dnsrecon on hostnames
 
 Initial access
     password guessing/cracking/spraying
-    "exploitation"
     gtfobins
     5 ways:
         exploit public services
@@ -26,11 +21,18 @@ Execution
 Situational Awareness
 
 Persistence
+    registry
+    startup folder
+    scheduled task
+    services
+    wmi events
 
 Priv Escalation
     Win:
         dll search order hijack
         unattended install files
+        NTLM password cracking (LANMAN/NTLMv1)
+        NTLM relay (NTLMv2 w/ responder)
 
 Defense Evasion
 
@@ -44,6 +46,9 @@ Lat mov't
 Collection
 
 C2
+    sliver
+
+
 
 Exfiltration (of data)
     HTTP(S)

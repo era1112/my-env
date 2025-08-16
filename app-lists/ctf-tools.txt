@@ -7,6 +7,8 @@ AD
   ntdsutil, vssown.vbs, DCSync (dump ntds.dit)
   msf -> db_nmap (find smb listeners)
   inveigh
+  bloodhound
+  responder
 
 Appliance correlation
   favicon
@@ -49,6 +51,7 @@ Others
   NTML Recon (scans for http endpoints)
   rg (rust-based grep)
   PTF (distro)
+  autoruns
 
 OSINT
   arin/ripe/afrinic/etc
@@ -82,6 +85,7 @@ Payloads
 Scanning
   massscan
   nmap
+  bloodhound
 
 Scraping
   Eyewitness
@@ -90,6 +94,7 @@ Scraping
 Windows code execution:
   RDP
   wmic.exe
+  sc.exe
   PsExec.exe
   *exec.py (impacket)
   powerup/invoke-allchecks
