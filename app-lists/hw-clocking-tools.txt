@@ -1,0 +1,8 @@
+Fans
+  Fancontrol
+
+Benchmarking
+  OCCT
+
+Monitor/alarm
+  HWInfo64
