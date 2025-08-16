@@ -18,4 +18,4 @@ Set-Alias -Name which -Value Get-Command
 function salm{1..3|%{[System.Media.SystemSounds]::Exclamation.Play();Start-Sleep 1}}
 
 # lalm: perpetual chime
-function lalm{while($true){[System.Media.SystemSounds]::Exclamation.Play();Start-Sleep 1}}
+function lalm{while($true){[System.Media.SystemSounds]::Exclamation.Play();Start-Sleep 3}}
