@@ -13,6 +13,7 @@ LOOK FOR OLD/CACHE STUFF TO DELETE
 [X] Check windows users list
 [X] Check AD users and permissions
 [X] Check defender exclusion lists and history
+[]  Bleachbit
 
 UPDATE SYSTEM STUFF
 ====================

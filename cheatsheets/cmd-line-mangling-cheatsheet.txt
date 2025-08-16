@@ -53,3 +53,8 @@ output redirection
 [wc] (count lines in file)
   cat raw.txt | wc -l
   PS: Get-Content tgt.txt | Measure-Object -Line
+
+File getters
+  Invoke-NinjaCopy
+  robocopy
+  RawCopy

@@ -4,6 +4,9 @@ AD
   Certify
   Certipy
   GetADUsers.py (Impacket)
+  ntdsutil, vssown.vbs, DCSync (dump ntds.dit)
+  msf -> db_nmap (find smb listeners)
+  inveigh
 
 Appliance correlation
   favicon
@@ -27,6 +30,7 @@ DNS
   dig
   dnsrecon
   dnsdumpster.com
+  powerMAD
 
 Email
   anymailfinder.com
@@ -67,6 +71,8 @@ Passwords
   ncrack
   patator
   msf
+  pipal
+  pcredz
 
 Payloads
   Sharp Collection
