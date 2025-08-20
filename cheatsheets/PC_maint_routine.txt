@@ -2,9 +2,9 @@ LOOK FOR OLD/CACHE STUFF TO DELETE
 ===================================
 [X]	add/remove programs list
     [X] Check for excessive .NET packages, VC++ distros, HP, MS, nVidia non-essentials 
-[] windows "disk cleanup"
+[x] windows "disk cleanup"
 [X]	windirstat (look for large files, Appdata bloat, etc)
-[] startup items (from ctrl+shift+esc menu, settings app, autoruns)
+[x] startup items (from ctrl+shift+esc menu, settings app, autoruns)
 [X] check on win firewall allowed apps
 [X] system scan for any relics of "logmein" (from exam proctoring)
 [X] Check USBDeview for anything abnormal
@@ -17,7 +17,7 @@ LOOK FOR OLD/CACHE STUFF TO DELETE
 
 UPDATE SYSTEM STUFF
 ====================
-[]	good solid reboot [shutdown /s /f /t 00]
+[x]	good solid reboot [shutdown /s /f /t 00]
 [X]	windows update
 [X]	hp update (hp support assist app)
 [?]	gpu update (nvidia app)
