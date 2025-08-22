@@ -1,8 +1,12 @@
 Find AD users:
-    GetADUsers.py site/U:P -dc-ip 1.2.3.4 -all ["all" means all scripts known]
+    GetADUsers.py domain/U:P@host -dc-ip 1.2.3.4 -all ["all" means all scripts known]
 
-CLI smb connection  
+CLI smb connection (automates version discovery)
     smbclient.py
 
 Remote exec
     wmiexec.py -> regsvr32 [for dll execution]
+    *exec.py
+
+DC credential scraping (uses wmiexec and NTDS.dit)
+    secretsdump.py 

@@ -1,5 +1,6 @@
 Show whch distro:
   cat /etc/*release
+  lsb_release -a
 
 Show which DE:
   echo $XDG_SESSION_DESKTOP
@@ -8,10 +9,21 @@ Show which DE:
 Show which WM
   ls -l /etc/alternatives/x-window-manager
 
-
 First xx lines (default is 10)
   head -n xx tgt.txt
 
 Line count
   wc -l tgt.txt
 PS: Get-Content tgt.txt | Measure-Object -Line
+
+group/user stuff:
+  id
+
+list which cmds can be run as current user:
+  sudo -l -l
+
+socket/process stuff:
+  ss
+  ss -p
+  ps -a
+  killall procName

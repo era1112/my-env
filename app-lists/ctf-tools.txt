@@ -32,6 +32,7 @@ DNS
   dig
   dnsrecon
   dnsdumpster.com
+  inveigh
   powerMAD
 
 Email
@@ -90,9 +91,11 @@ Scanning
 Scraping
   Eyewitness
   Powerview (Powersploit)
+  pcredz
 
 Windows code execution:
   RDP
+  winrm
   wmic.exe
   sc.exe
   PsExec.exe

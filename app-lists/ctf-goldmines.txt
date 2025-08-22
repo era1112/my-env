@@ -1,0 +1,41 @@
+Linux:
+/home/*/.ssh/id         encrypted private keys
+/root/.ssh              encrypted private keys
+/etc/shadow             password hashes
+/etc/password           (very legacy) passwords
+netstat -name
+arp -a
+ss -t
+/etc/passwd
+/etc/shadow
+/etc/group
+~ 
+.bash_history
+pf
+firewall
+/etc/sudoers
+sudo -l -l
+find / 
+GREP -Inri -e passw -e secret -e key /etc
+find / -perm 4000
+
+
+
+Windows:
+C:\Windows\System32\config\SAM      NT hash
+C:\Windows\NTDS\NTDS.dit            NT/LM hashes for all domain users. Only on DC's
+HKEY_LOCAL_MACHINE\SAM              Mirror of SAM DB
+HKEY_LOCAL_MACHINE\Security\Cache   hashed credentials for domain users to use for offline login
+Mimikatz                            aggregates random cached hashes from all over the place
+ipconfig /displaydns
+SAM database
+set
+%PATH
+net user, localgroup, administrators
+dir /b /s
+reg
+    HKLM\SAM
+    HKLM\Security
+
+
+    

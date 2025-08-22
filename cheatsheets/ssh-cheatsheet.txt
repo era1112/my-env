@@ -1,0 +1,102 @@
+Establish a shell:
+    ssh user@host.com
+
+Remote execute:
+    ssh user@host "cmd --args"
+
+Save ssh creds:
+    ssh-copy-id user@host
+
+Tunneling/port forwarding:
+
+Tags:
+    -L (local), -R (remote), -D (dynamic): 3 main modes
+    a:b:c:d
+        Local: lclIP:lclPort:tgtHost:tgtPort
+        Remote: svrIP:svrPort:lclHost:lclPort
+
+    -f suppress to background
+    -N does not start a remote shell, just catches connections and forwards to the port
+    By default, sshd listens on port 22 on ALL interfaces (0.0.0.0:22) 
+
+By example:
+    Host A:     Under tester control
+                Access to Host C over the internet
+                No access to Host B
+    
+    Host B:     Tucked away in a local network somewhere far away
+                Access to Host C over a LAN
+                No access to Host A
+
+    Host C:     Some kind of jump box
+                Access to host A over the internet
+                Access to host B over LAN
+
+Case 1: Local (from host A, command host C to proxy a session to host B)
+===============
+From host A:
+    ssh -L localIP:localPort:destIPHost:destPort username@sshSvrIPHost
+    ssh -L localPort:destIPHost:destPort username@sshSvrIPHost
+        this assumes that sshd is running on port 22 on sshSvrIPHost
+
+Explained another way:
+    JumpBox is running a SSH server (SSHD) that is unattended and waiting to initiate forwarding sessions. 
+    
+    ssh -L 127.0.0.1:8888:dev-web:80 user@jumpBox.com
+
+    Setup: ssh server is running on JumpBox (that has access to the tester and the subject)
+
+    This means that passing traffic to lh:8888 will cause the connection to get caught by your ssh client, pipe it to the ssh server, and then to the destination ip:port
+    To dev-web, this looks like a session with jumpBox
+    In the B-C LAN, this look like normal, possibly unencrypted traffic
+
+    In other words, on host A: lh:8888 - ssh -> jumpBox.com:22 - http -> dev-web:80
+
+
+Case 2: Reverse (from host B, command host C to automatically forward specific traffic to you)
+=======================
+From host A (hijacking):
+    ssh -R sshSvrProxyIP:sshSvrProxyPort:localIP:localPort
+
+    start masquerade service on host A lh:port
+
+    now when Host B attempts to go to hostC:port, they will instead get hostA:port
+
+
+From host B (tunnelling): 
+    ssh -R sshSvrProxyIP:sshSvrProxyPort:localIP:localPort user@jumpbox.com
+        This assumes that sshd is running on port 22 on jumpbox.com
+        
+        May need to add "GatewayPorts yes" to /etc/ssh/sshd_config
+
+    Host C is now waiting for a caller to sshProxyPort
+
+    From host A:
+        curl http://jumpbox.com:8888
+        no ssh client needed on host A 
+        Traffic inside the B-C LAN is encrypted :)
+
+
+    In other words, on host A: lh:dynamic - http -> jumpBox.com:8888 - ssh -> dev-web:80
+
+
+Case 3: Dynamic (from host A, use SOCKS to connect as if you were C)
+=======================
+On host A:
+    ssh -D localIP user@hostC
+
+    socks5h://127.0.0.1:localIP
+
+Now host A's ssh service will catch all TCP sessions and tunnel them to (and out of) host C (with a socks endpoint on hostA at 1080) 
+
+Requires app-level SOCKS compatibility
+
+
+Hasty SOCKS Proxy (from Host A, make connections to networks as you were host C)
+========================
+
+From host A:
+ssh -R 6969 user2@JumpBox
+    6969    Starts a SOCKS proxy on jumpbox:6969
+
+(takes 6969 as shorthand for 0.0.0.0:6969:lh:6969) (ie hostA:6969 to hostC:6969)
