@@ -2,9 +2,9 @@ LOOK FOR OLD/CACHE STUFF TO DELETE
 ===================================
 [X]	add/remove programs list
     [X] Check for excessive .NET packages, VC++ distros, HP, MS, nVidia non-essentials 
-[X] windows "disk cleanup"
+[x] windows "disk cleanup"
 [X]	windirstat (look for large files, Appdata bloat, etc)
-[X] startup items (from ctrl+shift+esc menu, settings app, autoruns)
+[x] startup items (from ctrl+shift+esc menu, settings app, autoruns)
 [X] check on win firewall allowed apps
 [X] system scan for any relics of "logmein" (from exam proctoring)
 [X] Check USBDeview for anything abnormal
@@ -13,16 +13,16 @@ LOOK FOR OLD/CACHE STUFF TO DELETE
 [X] Check windows users list
 [X] Check AD users and permissions
 [X] Check defender exclusion lists and history
-[]  Bleachbit
+[X]  Bleachbit
 
 UPDATE SYSTEM STUFF
 ====================
-[X]	good solid reboot [shutdown /s /f /t 00]
+[x]	good solid reboot [shutdown /s /f /t 00]
 [X]	windows update
 [X]	hp update (hp support assist app)
-[X]	gpu update (nvidia app)
-[X]	platform hw update (intel driver & support app)
-[X]	igpu update (intel graphics software app)
+[?]	gpu update (nvidia app)
+[?]	platform hw update (intel driver & support app)
+[?]	igpu update (intel graphics software app)
 [X]	update steam
 [X] Windows health wizard: Dism.exe /online /cleanup-image /restorehealth
 [X] Windows disk health wizard: Sfc /scannow
