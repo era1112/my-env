@@ -1,0 +1,56 @@
+Overview
+    3 Roles
+        Client (hostname and user)
+        Server/Service ("SPN")
+        DC ("KDC")
+            Also usually a DNS server, authentication server, ticket granting server
+
+    3 Long-Term Secrets
+        krbtgt password
+            on DC
+            signs tgt's and st's
+            authoritative copies of all domain user pw hashes
+
+        client pw hash
+
+        SPN account's password
+            SPN's can be a property of a user or computer
+
+    3 steps to authenticate
+        Pre-auth (obtain Ticket-Granting Ticket)
+            Tends to happen at windows login
+            TGT's are valid for 5 min by default
+
+            AS-REQ
+                Client req to DC, pw-hash and time
+
+            AS-REP
+                KDC returns TGT and session key
+
+        Request service ticket
+            TGS-REQ
+                Client sends DC request with SPN and TGT
+
+            TGS-REP
+                DC responds with svc ticket
+
+        Use svc ticket
+            ST
+                Client sends svc ticket to server 
+
+Formats
+    SPN
+        serviceClass/host:port
+
+    Hostname vs FQDN
+        hostname.domainname.xyz
+
+Terms
+    Golden Ticket
+    Silver Ticket
+
+Kerberoast attacks
+    Query DC for user accts with SPN's
+    Req svc tickets for those SPN's
+    Offline password cracking against those tickets
+    Results in username and NThash extraction 
