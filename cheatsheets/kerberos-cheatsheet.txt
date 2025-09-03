@@ -49,8 +49,18 @@ Terms
     Golden Ticket
     Silver Ticket
 
-Kerberoast attacks
-    Query DC for user accts with SPN's
-    Req svc tickets for those SPN's
-    Offline password cracking against those tickets
-    Results in username and NThash extraction 
+Attacks:
+    Kerberoast:
+        Query DC for user accts with SPN's
+        Req svc tickets for those SPN's
+        Offline password cracking against those tickets
+        Results in username and NThash extraction 
+
+    Pass-the-ticket
+        Steal ticket from compromised machine using mimikatz, rubeus
+        Reuse ticket on other box to access service
+    
+    Overpass-the-hash
+        With the user's hash, generate a TGT
+
+    
