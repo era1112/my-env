@@ -1,9 +1,0 @@
-Show login policy
-    net accounts /domain
-
-NTDSUtil "Install From Media"
-    can scrape for nt creds/hashes
-
-Mimikatz
-    dumps creds from LSASS.exe
-

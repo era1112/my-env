@@ -1,0 +1,18 @@
+MS's PKI
+    802.1x, code signing, smart card support, etc
+
+ADCS enterprise CA: integrated with AD, public key is pushed to all domain-joined boxes
+
+CSR: message to CA to request a signed cert for something
+
+EKU: Policy for how the key can be used
+
+Common misconfigs:
+    ESC1: No restriction on who can request a cert and no restriction on SAN
+        Allows anyone to retrieve a cert for anyone else (using SAN's)
+
+    ESC4: Certificate objects can be modified by anyone
+
+    ESC8: Enrollment over HTTP allowed
+        ADCSPwn
+        ntlmrelayx.py

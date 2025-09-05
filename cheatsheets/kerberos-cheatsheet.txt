@@ -63,4 +63,27 @@ Attacks:
     Overpass-the-hash
         With the user's hash, generate a TGT
 
+    Skeleton Key
+        Adds second password to all accounts
+        Function override on DC
+        Volatile on DC w/ debug privileges from mimikatz
+
+    Golden Ticket
+        Forging TGTs using krbtgt hash
+        impacket, mimikatz, rubeus, most c2's
+        requires krbtgt hash, domain SID, FQDN
+
+    Silver Ticket
+        Forged ST's
+        requires the service's hash
+        Can grant a user additional group perms (for that svc)
+        On a DC, can escalate to the krbtgt hash with DCSync
+
+    DCSync/DCShadow
+        Replicates the domain
+
+    Access ntds.dit
+        ntdsutil.exe -> ifm snapshot
+        secretsdump.py
+        volume shadow copy service
     
