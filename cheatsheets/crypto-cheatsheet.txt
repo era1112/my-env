@@ -1,0 +1,131 @@
+HPKE (Hyprid Public Key Encryption)
+
+===================================
+
+Confusingly equivalent terms:
+    Plaintext, P
+    Noise, seed
+    Salt, nonce, IV
+    Public key, PKE, assymetric encryption, ECDF
+    MAC, message hash, authentication tag, message digest
+    Master secret, shared secret, raw shared secret, K, prk
+    DEM, key wrapping
+    Ciphertext, Q
+    Public-Private, Hybrid, KMS, envelope encryption, PKE, KEM-DEM, HPKE, Setup-Seal-Open
+
+---
+
+Generation
+    Used for: Creating private, random values
+        In:
+        Out: Random stream
+    Ie:
+        Keys
+        Nonces/IV
+        CSPRNG
+        MAC
+        Mask Generation Function:
+        CSPRNG
+        HSM
+        TPM
+        Intel RDRAND
+        ARM TrustZone
+    Details:
+
+
+KEM (Key Encapsulation Mechanism)
+    Used for: Session key negotiation
+        In: Other user's public key, own public key, Nonce
+        Out: Shared Master Secret, "Capsule" (includes ephemeral public key for transmission)
+    Ie:
+        RSA:
+        ECC:
+        ECDH:
+        X25519: More side-channel resistant (Montgomery ladder vs double-and-add)
+        Curve25519
+        crypto_scalarmult_curve25519
+        post-quantun KEM:
+            Kyber
+            Saber
+            NTRU
+            LPRime
+    Details: 
+        Assymetric Ciphers or post-quantum
+        This is the only step that changes for post-quantum
+        Crypt assurance comes from 1-way functions
+        Operations are called "encapsulate" and "decapsulate"
+
+
+KDF (Key Derivation Function)
+    Used for: Produces subkeys from master secret
+        In: Master secret, salt (nonce), headers, counter 
+        Out: Keys, subkeys, IV for DEM
+    Ie:
+        HKDF: 
+        PKBDF2:
+    Details:
+
+
+DEM (Data Encapsulation Mechanism):
+    Used for: Bulk encryption once keys are exchanged
+        In: Plaintext, session keys, IV
+        Out: CT
+    Ie:
+        AES: 
+        AES-ECB:
+        AES-KW:
+        AES-CBC:
+        AES-GCM: An AEAD mode (in contrast to legacy data+mac schemes)
+        ChaCha20:
+        Poly1305:
+    Details:
+        Symmetric Cipher
+        Crypt assurance comes from use of (shared secret) private key
+        Used in different "modes" (algorithm for iterating the encryption algorithm)
+
+
+Compression:
+    Used for: reduce size, binary smoothing
+        In: CT
+        Out: Compressed CT
+    Ie:
+
+    Details:
+
+
+Signature/Fingerprint:
+    Used for: Confirming message is not tampered with
+        In: Private Key, message
+        Out: Signature 
+    Ie:
+        PAdES
+        JWS/JWT
+        PKCS
+        Authenticode
+        S/MIME
+        ECDSA
+        Ed25519
+    Details:
+        "Message Digest" is a hash of the message before signature (intermediate step)
+        Then, the digest is encrypted with the private key ("signs the digest")
+
+
+Cryptosystem:
+    Specification for crypt operations, including encoding and message format
+    Ie:
+        PGP (RFC 4880)
+        FIDO
+        PIV
+        ECIES
+        RSA
+        AWS KMS
+        Noise
+        TLS 1.3
+
+
+Implementation:
+    Ie. OpenPGP, GnuPG
+
+
+Frontend:
+    Ie. Kleopatra, /bin/gpg

@@ -1,4 +1,4 @@
-Threat/CoA matrix
+Threat/toolbox matrix
 
 |                       | Deceive                           | Detect                | Deny/Degrade                                 |   Destroy              |
 | -------------         | ---------------                   | --------              | --------------                               | ---------              |
