@@ -1,5 +1,7 @@
 HPKE (Hyprid Public Key Encryption)
 
+todo:
+
 ===================================
 
 Confusingly equivalent terms:
@@ -17,19 +19,27 @@ Confusingly equivalent terms:
 
 Generation
     Used for: Creating private, random values
-        In:
-        Out: Random stream
+        In: Noise source
+        Out: Random stream (IV's, nonces, etc)
     Ie:
-        Keys
-        Nonces/IV
-        CSPRNG
-        MAC
-        Mask Generation Function:
-        CSPRNG
-        HSM
-        TPM
-        Intel RDRAND
-        ARM TrustZone
+        CSPRNG: Cryptographically secure pseudorandom number generator
+            Linux: 
+                /dev/random
+                collects entropy constantly from different hardware events
+                Counts entropy bits in/out, fails if count falls too low
+                Can include entropy from SoC TRNGs
+            Windows:
+                Kernel RNG driver inside CNG (cryptography next gen) framework 
+                cng.sys and BCryptGen API call
+                Collects noise from TPM, hardware events
+                Includes randomness assurance tests, automatic reseeding
+            Android/Samsung: Exynos
+        SoC TRNG: separate board component for returning rands (/dev/hwrng)
+            Ring-oscillator type: inverters in a infinite loop, jitter develops
+            Avalanche-diode type: PN junctions held at threshold voltate, drain measured
+        Mask Generation Function: Expands a seed into a larger random block
+        DRBG: RNG based on an initial seed. NIST approved methods are CTR-DRBG and HMAC-DRBG (different algs and iteration modes)
+        TRNG: True Random Number Generator (certified, commonly avalanche diodes or ring oscilators)
     Details:
 
 
@@ -121,6 +131,7 @@ Cryptosystem:
         AWS KMS
         Noise
         TLS 1.3
+        Signal
 
 
 Implementation:

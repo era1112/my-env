@@ -54,6 +54,9 @@ output redirection
   cat raw.txt | wc -l
   PS: Get-Content tgt.txt | Measure-Object -Line
 
+[watch] (live view)
+  watch -n 0.5 cat /dev/random
+
 File getters
   Invoke-NinjaCopy
   robocopy
