@@ -28,7 +28,9 @@ function rot13()
 }
 
 # aliases
+alias ls='ls -lF --color=auto'
 alias la='ls -laF --color=auto'
+alias ll='ls -laF --color=auto'
 alias tone='paplay /usr/share/sounds/sound-icons/start'
 alias fp='featherpad'
 alias dir='dir --color=auto'

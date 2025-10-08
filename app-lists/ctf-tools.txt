@@ -110,3 +110,6 @@ World flows
 
 AV/EDR Evasion 
   chameleon
+
+Wordlists
+  https://github.com/kkrypt0nn/wordlists

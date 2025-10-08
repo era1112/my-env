@@ -1,0 +1,10 @@
+Resources:
+
+https://secondlifestorage.com/index.php
+
+
+BMS roles:
+    monitoring (electrics, temp)
+    Protection (over/under charge)
+    cell balancing
+    health tracking

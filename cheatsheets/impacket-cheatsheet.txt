@@ -1,5 +1,5 @@
 Find AD users:
-    GetADUsers.py domain/U:P@host -dc-ip 1.2.3.4 -all ["all" means all scripts known]
+    GetADUsers.py domain/USERNAME:PASSWORD -dc-ip x.x.x.x -all ["all" means all scripts known]
 
 CLI smb connection (automates version discovery)
     smbclient.py
@@ -10,3 +10,9 @@ Remote exec
 
 DC credential scraping (uses wmiexec and NTDS.dit)
     secretsdump.py 
+
+GetUserSPNs.py
+    GetUserSPNs.py -request domain/user -dc-ip 1.2.3.4
+
+SMBExec.py
+    SMBExec.py domain/U:P@IP

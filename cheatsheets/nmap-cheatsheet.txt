@@ -1,8 +1,20 @@
 Very modular:
   nmap --option1 --option2 --optionN host.to.scan
 
+  *** consider massscan instead ***
+
+Serious speeeeeeeeeeeeeeeed:
+  nmap -n -Pn -T5 --min-rate 10000 --max-retries 2 --host-timeout 30s 10.130.9.0/24
+    no DNS resolution
+    skip host discovery (assume all hosts are up)
+    T5 is fastest rate
+    min-rate forces things faster
+    max-retries and host-timeout limit slippery hosts
+
+
+
 Reasonable defaults:
-  -n -sV [good script coverage]
+  -n -T4 [no dns resolution, aggressive timing]
   -oA basename [stores in normal, greppable, and XML]
   --dns-servers 8.8.8.8 [makes it faster if explicit]
 
