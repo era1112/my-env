@@ -1,7 +1,4 @@
 HPKE (Hyprid Public Key Encryption)
-
-todo:
-
 ===================================
 
 Confusingly equivalent terms:
@@ -14,6 +11,25 @@ Confusingly equivalent terms:
     DEM, key wrapping
     Ciphertext, Q
     Public-Private, Hybrid, KMS, envelope encryption, PKE, KEM-DEM, HPKE, Setup-Seal-Open
+
+
+---
+
+Testing RNG:
+
+generate sample
+(on windows)
+    $size = 10*1024*1024 # 10 MB
+    $bytes = New-Object byte[] $size
+    $rng = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+    $rng.GetBytes($bytes)
+    [System.IO.File]::WriteAllBytes("C:\temp\win_rng_10M.bin", $bytes)
+    $rng.Dispose()
+
+Test
+    dieharder -a -f path/to.file
+    binwalk --entropy path/to.file
+    detect-it-easy
 
 ---
 

@@ -1,0 +1,31 @@
+Tools
+
+    Telnet client:
+        Enable-WindowsOptionalFeature -Online -FeatureName TelnetClient
+
+        telnet site.com 23
+
+        Disable-WindowsOptionalFeature -Online -FeatureName TelnetClient
+
+    Usenet conventions (119)
+        HELP
+        LIST
+        LIST ACTIVE
+        STAT
+        GROUP groupname
+        ARTICLE
+
+Sites
+---
+
+telehack.com (telnet)
+bbs.archaicbinary.net (telnet)
+news.easynews.com
+vert.synchro.net
+
+waren
+
+
+https://store.chipkin.com/articles/telnet-list-of-telnet-servers
+https://synchro.net/sbbslist.html
+https://www.mudconnect.com/
