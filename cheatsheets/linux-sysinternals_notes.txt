@@ -1,8 +1,0 @@
-routing stack
-  Ubuntu/Debian: netfilter (kernel module) -> iptables (and arptables, ebtables, ip6tables) -> ufw 
-  RHEL: nftables (nft) -> firewalld 
-  BSD: pf (kernel) -> pfctl
-  Also sometimes: iptables-persistent
-
-Hasty python/http server
-  python3 -m http.server [puts it on port 8000], serves files in pwd, can xfer over curl
