@@ -1,0 +1,32 @@
+Rule: BLOCK EVERYTHING AND REPORT
+=================================
+
+    1) Set firewall to block by default
+        wf.msc
+            Right‑click the top node and choose Properties.
+            For Domain, Private, and Public set Inbound connections = Block and Outbound connections = Block.
+
+    2) Enable firewall logging
+        wf.msc
+            right‑click the top node → Properties → Logging for each profile.
+            Set dropped packet logging on and increase log size
+
+    3) Create audit events (so Event Viewer gets events on block)
+        secpol.msc
+            Advanced Audit Policy Configuration > System Audit Policies > Object Access > Filtering Platform Packet Drop and Filtering Platform Connection -> Audit on Failure
+            
+    4) Create alerts
+        Event Viewer
+            Windows Logs -> Security
+            Look for a blocked packet event (probably event ID 5152 or 5157)
+            Right click -> attach task to event (events will be in Task Scheduler > Event Viewer Tasks)
+                Will need to spawn a task from event viewer for each event-id
+                Start a program: powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Users\User\scripts\winevent-alerter.ps1"
+                If task is already running: queue instance
+
+
+
+            Defs:
+                Event ID 5152 indicates the Windows Filtering Platform blocked an individual network packet
+                Event ID 5157 indicates the Windows Filtering Platform blocked a network connection attempt (a higher‑level connection event vs a single packet)
+
