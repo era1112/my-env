@@ -149,6 +149,8 @@ Cryptosystem:
         TLS 1.3
         Signal
 
+Certification:
+    Ie. FIPS
 
 Implementation:
     Ie. OpenPGP, GnuPG
@@ -156,3 +158,33 @@ Implementation:
 
 Frontend:
     Ie. Kleopatra, /bin/gpg
+
+
+PQS
+≈==========
+
+AES256 NIST-PQC [NIS IR8547]
+    symmetric key needs 128 bits of entropy
+    birthday attact at~295 exabytes
+        sources:
+            EFF-long: 10 words
+            65533-wort: 8 words
+            person-object-action: 6 PAOS
+    possible candidates: ML-KEM (CRYSTALS‑Kyber), ML-DSA (CRYSTALS‑Dilithium
+
+
+ECC/ECDH/ECRSA
+     Non PQS (shors)
+     Shors algorithm -could Crack harvested messages in weeks (suggested 1994)
+     possibly candidates: SLH-DSA (SPHINCS+)
+
+
+DSA
+   Non PQS
+   Possible candidates: N-DSA (Falcon) — (planned / alternative)
+
+
+---
+todo
+CRSTALS-KYBER, CRYSTlLS-DILLIRIUM, Falcon, and SPHINX+
+AES in detail, include why"s
