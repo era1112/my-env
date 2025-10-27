@@ -57,9 +57,11 @@ Generation
         DRBG: RNG based on an initial seed. NIST approved methods are CTR-DRBG and HMAC-DRBG (different algs and iteration modes)
         TRNG: True Random Number Generator (certified, commonly avalanche diodes or ring oscilators)
     Details:
+       *RSA
+       *ECC2159
 
 
-KEM (Key Encapsulation Mechanism)
+KEM (Key Encapsulation Mechanism, FIPS 203)
     Used for: Session key negotiation
         In: Other user's public key, own public key, Nonce
         Out: Shared Master Secret, "Capsule" (includes ephemeral public key for transmission)
@@ -71,7 +73,7 @@ KEM (Key Encapsulation Mechanism)
         Curve25519
         crypto_scalarmult_curve25519
         post-quantun KEM:
-            Kyber
+            *CHRYSTALS-Kyber (ml-kem)
             Saber
             NTRU
             LPRime
@@ -131,6 +133,7 @@ Signature/Fingerprint:
         S/MIME
         ECDSA
         Ed25519
+        * SPHINCS+ (SLH-DSA)
     Details:
         "Message Digest" is a hash of the message before signature (intermediate step)
         Then, the digest is encrypted with the private key ("signs the digest")
@@ -185,6 +188,3 @@ DSA
 
 
 ---
-todo
-CRSTALS-KYBER, CRYSTlLS-DILLIRIUM, Falcon, and SPHINX+
-AES in detail, include why"s
