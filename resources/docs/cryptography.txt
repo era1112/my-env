@@ -10,7 +10,7 @@ Confusingly equivalent terms:
     Master secret, shared secret, raw shared secret, K, prk
     DEM, key wrapping
     Ciphertext, Q
-    Public-Private, Hybrid, KMS, envelope encryption, PKE, KEM-DEM, HPKE, Setup-Seal-Open
+    Public-Private, Hybrid, KMS, envelope encryption, PKE, KEM-DEM, HPKE, Setup-Seal-Openb
 
 
 ---
