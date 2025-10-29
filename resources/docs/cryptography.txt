@@ -1,4 +1,4 @@
-HPKE (Hyprid Public Key Encryption)
+HPKE (Hyprid Public Key Encryption) 
 ===================================
 
 Confusingly equivalent terms:
@@ -27,6 +27,7 @@ generate sample
     $rng.Dispose()
 
 Test
+    https://github.com/usnistgov/SP800-90B_EntropyAssessment
     dieharder -a -f path/to.file
     binwalk --entropy path/to.file
     detect-it-easy
@@ -64,17 +65,13 @@ KEM (Key Encapsulation Mechanism)
         In: Other user's public key, own public key, Nonce
         Out: Shared Master Secret, "Capsule" (includes ephemeral public key for transmission)
     Ie:
-        RSA:
-        ECC:
-        ECDH:
+        RSA: Difficulty of factoring large numbers pq = n (n is public) "integer factorization problem"
+        Diffe-Hellman: Discrete logrithm problem G^x mod P = h (x is secret, h is public)
+        ECC: eliptic curve discrete logarithm problem
         X25519: More side-channel resistant (Montgomery ladder vs double-and-add)
-        Curve25519
-        crypto_scalarmult_curve25519
         post-quantun KEM:
-            Kyber
-            Saber
-            NTRU
-            LPRime
+           NIST IR 8547
+           ML-KEM: modular learning with errors problem
     Details: 
         Assymetric Ciphers or post-quantum
         This is the only step that changes for post-quantum
@@ -87,6 +84,8 @@ KDF (Key Derivation Function)
         In: Master secret, salt (nonce), headers, counter 
         Out: Keys, subkeys, IV for DEM
     Ie:
+        ML-KDF
+        Sponge function (Keccak algorithm)
         HKDF: 
         PKBDF2:
     Details:
@@ -119,18 +118,25 @@ Compression:
     Details:
 
 
-Signature/Fingerprint:
+Hashing:
     Used for: Confirming message is not tampered with
         In: Private Key, message
         Out: Signature 
     Ie:
-        PAdES
-        JWS/JWT
-        PKCS
-        Authenticode
-        S/MIME
-        ECDSA
-        Ed25519
+        SHA-2: Merkle–Damgård construction
+        SHA-3: Kekkac Alg (sponge function)
+        SHAKE: XOF (extensible output format)
+
+
+Signing
+    Used for: Confirming the identity of signer. Almost always hashes
+        In: File
+        Out: File with embedded signature
+    Ie:
+        EC-DSA
+        ML-DSA (post-quantum)
+        SLH-DSA (PQ)
+    
     Details:
         "Message Digest" is a hash of the message before signature (intermediate step)
         Then, the digest is encrypted with the private key ("signs the digest")

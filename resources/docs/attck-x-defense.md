@@ -1,6 +1,6 @@
 Threat/toolbox matrix
 
-|                       | Deceive                           | Detect                | Deny/Degrade                                 |   Destroy              |
+|                       | Deceive                           | Detect                | Deny/Degrade                                 | Destroy                |
 | -------------         | ---------------                   | --------              | --------------                               | ---------              |
 | Recon                 | Honeypots, Self-profiling         | Sensors, Canaries     | Gateway Firewalls, Honeypots                 | Counter-acts           |
 | Weaponization         |                                   | Research              | NIPS                                         |                        |                     
