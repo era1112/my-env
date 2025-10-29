@@ -10,7 +10,7 @@ Confusingly equivalent terms:
     Master secret, shared secret, raw shared secret, K, prk
     DEM, key wrapping
     Ciphertext, Q
-    Public-Private, Hybrid, KMS, envelope encryption, PKE, KEM-DEM, HPKE, Setup-Seal-Open
+    Public-Private, Hybrid, KMS, envelope encryption, PKE, KEM-DEM, HPKE, Setup-Seal-Openb
 
 
 ---
@@ -58,9 +58,11 @@ Generation
         DRBG: RNG based on an initial seed. NIST approved methods are CTR-DRBG and HMAC-DRBG (different algs and iteration modes)
         TRNG: True Random Number Generator (certified, commonly avalanche diodes or ring oscilators)
     Details:
+       *RSA
+       *ECC2159
 
 
-KEM (Key Encapsulation Mechanism)
+KEM (Key Encapsulation Mechanism, FIPS 203)
     Used for: Session key negotiation
         In: Other user's public key, own public key, Nonce
         Out: Shared Master Secret, "Capsule" (includes ephemeral public key for transmission)
@@ -155,6 +157,8 @@ Cryptosystem:
         TLS 1.3
         Signal
 
+Certification:
+    Ie. FIPS
 
 Implementation:
     Ie. OpenPGP, GnuPG
@@ -162,3 +166,30 @@ Implementation:
 
 Frontend:
     Ie. Kleopatra, /bin/gpg
+
+
+PQS
+≈==========
+
+AES256 NIST-PQC [NIS IR8547]
+    symmetric key needs 128 bits of entropy
+    birthday attact at~295 exabytes
+        sources:
+            EFF-long: 10 words
+            65533-wort: 8 words
+            person-object-action: 6 PAOS
+    possible candidates: ML-KEM (CRYSTALS‑Kyber), ML-DSA (CRYSTALS‑Dilithium
+
+
+ECC/ECDH/ECRSA
+     Non PQS (shors)
+     Shors algorithm -could Crack harvested messages in weeks (suggested 1994)
+     possibly candidates: SLH-DSA (SPHINCS+)
+
+
+DSA
+   Non PQS
+   Possible candidates: N-DSA (Falcon) — (planned / alternative)
+
+
+---
