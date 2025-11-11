@@ -14,3 +14,23 @@ bash
 
 	Run and detach and deny all to stdout
 		command &>/dev/null &
+
+unload DE and make headless
+	sudo systemctl isolate multi-user.target
+	change to tty console
+
+	Make default:
+		sudo systemctl set‑default multi-user.target
+		sudo systemctl mask display-manager.service
+
+		Go back to graphical:
+			sudo systemctl set‑default graphical.target
+			sudo systemctl unmask display-manager.service
+		
+
+change hostname
+	sudo hostnamectl set-hostname new-name
+	Edit /etc/hosts and replace the old name with the new one
+
+	(for hostname change until next reboot only)
+		sudo hostnamectl set-hostname new-name --transient
