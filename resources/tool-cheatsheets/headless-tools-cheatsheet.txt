@@ -34,3 +34,9 @@ change hostname
 
 	(for hostname change until next reboot only)
 		sudo hostnamectl set-hostname new-name --transient
+
+set up ssh server and autostart
+	systemctl status ssh
+	systemctl start ssh
+	systemctl enable ssh (starts at boot)
+	
