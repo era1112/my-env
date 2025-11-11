@@ -1,0 +1,31 @@
+- New EC2 instance with free AMI and free instance-type
+- Security: SSH to own IP only
+- Use own keypair (cloudHSM/CloudKMS costs $)
+- Start instance -> Connect -> ssh
+
+connect with key pem. something like: ssh -i "first.pem" admin@ec2-13-216-1-51.compute-1.amazonaws.com
+
+Update/Upgrade OS
+
+Install DE
+- sudo apt install xfce4 xfce4-goodies -y
+
+Install VNC server
+- sudo apt install tigervnc-standalone-server tigervnc-common -y
+- vncpasswd
+
+Create startup script
+- ~/.vnc/xstartup:
+#!/bin/bash
+xrdb $HOME/.Xresources
+startxfce4 &
+
+- chmod +x ~/.vnc/xstartup
+
+Start vnc server
+- vncserver :1
+
+Open port 5901 in EC2 -or- set up ssh tunnel
+ssh -L 5901:localhost:5901 -i your-key.pem user@your-ec2-ip
+
+Connect local client (will be at ec2 IP or localhost:5901 if tunnelled)
