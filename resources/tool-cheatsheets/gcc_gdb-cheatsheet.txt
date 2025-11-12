@@ -8,3 +8,28 @@
 - run the debugger:
 	gdb --args path/to/app <app params>
 	> run
+
+GDB commands
+	file					load binary file
+	start					start and break immediately
+	(c)ontinue				run to next bp
+	(r)un					start and run to next bp (with last run's arguements)
+	(d)elete x				delete bp #x
+	break x					breakpoint at source line x
+	list					source view
+	(f)rame					current source line
+	disas					asm view
+	si						step into
+	ni						step over
+	fin						step out
+	(i)nfo (b)reakpoints	show bps
+	i (r)eg					show registers
+	i variables				show all vars
+	bt						show stack frames
+	(k)ill					kill debugee
+	print 0xxxxxx			print at address, smart length and type
+	x/s 0xxxxxx				print string at addr
+	x/y	0xxxxxx				print y bytes at addr
+	x/w,d,g						print word, dword, g(q)word
+	x/?x					print x/?, as hex not ascii
+	(u)ntil x				run until x
