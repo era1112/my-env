@@ -33,3 +33,5 @@ GDB commands
 	x/w,d,g						print word, dword, g(q)word
 	x/?x					print x/?, as hex not ascii
 	(u)ntil x				run until x
+	display/yx				after every command, print yx. There can be multiple displays
+	undisplay x				delete display x
