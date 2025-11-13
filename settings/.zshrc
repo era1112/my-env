@@ -10,7 +10,19 @@ echo -en "\e]2;$(hostname -I | awk '{print $1}') | $USER@$(hostname)\a"
 
 
 # Shell greeting #
-echo "greetings"
+echo -e "\n\033[1;34m$USER@$(hostname)\033[0m"
+echo "Local IP: $(hostname -I | awk '{print $1}')"
+echo "Uptime: $(uptime -p)"
+echo "Load Average: $(cut -d ' ' -f1-3 /proc/loadavg)"
+echo "CPU Usage: $(top -bn1 | grep 'Cpu(s)' | awk '{print $2 + $4}')%"
+echo "Memory Usage: $(free -h | awk '/Mem:/ {print $3 "/" $2}')"
+echo "Disk Usage: $(df -h / | awk 'NR==2 {print $3 "/" $2 " used"}')"
+echo "Open SSH Connections: $(who | grep 'ssh' | wc -l)"
+echo -e "\n\033[1;34m📊 Top 3 CPU-Consuming Processes\033[0m"
+ps -eo pid,comm,%cpu --sort=-%cpu | head -n 4
+echo -e "\n\033[1;34m📈 Top 3 Memory-Consuming Processes\033[0m"
+ps -eo pid,comm,%mem --sort=-%mem | head -n 4
+echo ""
 
 
 # PATH #
