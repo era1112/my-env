@@ -14,6 +14,15 @@ screen
 	new and enter session with named handle
 		screen -S name
 
+	Panes:
+		Ctrl+a, |		vertical split
+		Ctrl+a, S		horizontal split
+		ctrl+a, tab		switch panes
+		ctrl+a, c		new shell in pane
+		ctrl+a, n/p		rotate session shown in pane
+		ctrl+a, X		close pane
+		ctrl+a, "		pane manager
+
 	create session and run detached (session will kill when command terminates)
 		screen -dmS [session name] [command]
 		
