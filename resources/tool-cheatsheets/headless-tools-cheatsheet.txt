@@ -1,12 +1,35 @@
 screen
-	run and detach
+	"detached" = running in the background
+	"attached" = running in bg, some shell has a open hanlde to it. (use 'sc -S <session> detach' to free)
+
+	list sessions
+		screen -ls
+
+	show current session
+		echo $STY
+
+	start and enter new session
+		screen
+
+	new and enter session with named handle
+		screen -S name
+
+	create session and run detached (session will kill when command terminates)
 		screen -dmS [session name] [command]
 		
-	reattach
+	switch to session
 		screen -r [session name]
 		
-	detach from attached
+	detach from session
 		ctrl+ad
+
+	send commands into sessions
+		screen -S <session> -X <command>
+			kill		kill session
+			detach		force detach
+
+	make session survive ctrl+c's
+
 
 bash
 	Run and detach
