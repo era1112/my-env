@@ -31,6 +31,8 @@ function rot13()
 alias ls='ls -lF --color=auto'
 alias la='ls -laF --color=auto'
 alias ll='ls -laF --color=auto'
+alias sc='screen'
+alias gdb='gdb -q -x ~/.gdb.cfg'
 alias tone='paplay /usr/share/sounds/sound-icons/start'
 alias fp='featherpad'
 alias dir='dir --color=auto'
