@@ -4,6 +4,12 @@ Establish a shell:
 Remote execute:
     ssh user@host "cmd --args"
 
+Move file remote -> local
+    scp -P <port> user@host:/path/to/remote/src /path/to/local/dest
+
+Move file local -> remote
+    scp -P <port> /path/to/local/src user@host:/path/to/remote/dest 
+
 Save ssh creds:
     ssh-copy-id user@host
 
