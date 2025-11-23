@@ -1,12 +1,44 @@
 screen
-	run and detach
+	"detached" = running in the background
+	"attached" = running in bg, some shell has a open hanlde to it. (use 'sc -S <session> detach' to free)
+
+	list sessions
+		screen -ls
+
+	show current session
+		echo $STY
+
+	start and enter new session
+		screen
+
+	new and enter session with named handle
+		screen -S name
+
+	Panes:
+		Ctrl+a, |		vertical split
+		Ctrl+a, S		horizontal split
+		ctrl+a, tab		switch panes
+		ctrl+a, c		new shell in pane
+		ctrl+a, n/p		rotate session shown in pane
+		ctrl+a, X		close pane
+		ctrl+a, "		pane manager
+
+	create session and run detached (session will kill when command terminates)
 		screen -dmS [session name] [command]
 		
-	reattach
+	switch to session
 		screen -r [session name]
 		
-	detach from attached
+	detach from session
 		ctrl+ad
+
+	send commands into sessions
+		screen -S <session> -X <command>
+			kill		kill session
+			detach		force detach
+
+	make session survive ctrl+c's
+
 
 bash
 	Run and detach
@@ -14,3 +46,29 @@ bash
 
 	Run and detach and deny all to stdout
 		command &>/dev/null &
+
+unload DE and make headless
+	sudo systemctl isolate multi-user.target
+	change to tty console
+
+	Make default:
+		sudo systemctl set‑default multi-user.target
+		sudo systemctl mask display-manager.service
+
+		Go back to graphical:
+			sudo systemctl set‑default graphical.target
+			sudo systemctl unmask display-manager.service
+		
+
+change hostname
+	sudo hostnamectl set-hostname new-name
+	Edit /etc/hosts and replace the old name with the new one
+
+	(for hostname change until next reboot only)
+		sudo hostnamectl set-hostname new-name --transient
+
+set up ssh server and autostart
+	systemctl status ssh
+	systemctl start ssh
+	systemctl enable ssh (starts at boot)
+	
