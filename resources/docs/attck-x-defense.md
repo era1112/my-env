@@ -20,13 +20,15 @@ Threat/toolbox matrix
 
 6 D's:
 
-Deceive:            To mislead or trick an adversary by providing false information or setting up decoy systems. 
+Delay:              To increase the time required for an adversary's activities to render effects
 
-Detect:             To determine if an intruder or adversary is present and active.
+Degrade:            To reduce the effectiveness or efficiency of an adversary's activities or systems without necessarily stopping them completely. 
 
 Deny:               To prevent an adversary from gaining access to or information from a system or network. 
 
-Degrade/Delay:      To reduce the effectiveness or efficiency of an adversary's activities or systems without necessarily stopping them completely. 
+Deceive:            To mislead or trick an adversary by providing false information or setting up decoy systems. 
+
+Detect:             To determine if an intruder or adversary is present and active.
 
 Destroy:            To permanently damage an adversary's infrastructure or systems so they can no longer function
 
