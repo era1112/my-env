@@ -1,0 +1,23 @@
+config:
+On debuggee:
+    bcdedit /debug on
+    bcdedit /dbgsettings net hostip:Debugger_VM_IP port:50505 key:a.b.c.d
+
+
+commands:
+bl              list bp's
+lm              list modules
+    lm u            userland modules
+    lm k            kernel modules
+    lm f            list modules w/ fs path
+    lm sm           sort alphabetically
+    lm v            verbose
+    lm a xxx        list module at mem addr xxx
+t               take one step and print watch's
+sxe xx          break on exeception xx
+    sxe -c ".lastevent" xx      break on exception xx and print useful "lastevent" info
+    sxe -c "yy ; g" xx          break on exception xx, print yy info, and then continue
+    sxi xx                      ignore on exception xx
+    sxi -c "" xx                ignore exp if a c param was involved
+    sx                          list exceptions and any breaks defined
+
