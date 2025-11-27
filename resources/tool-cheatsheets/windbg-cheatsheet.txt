@@ -6,6 +6,7 @@ On debuggee:
 
 commands:
 bl              list bp's
+dx y            print memory at y, with formatting x (db most familiar)
 lm              list modules
     lm u            userland modules
     lm k            kernel modules
