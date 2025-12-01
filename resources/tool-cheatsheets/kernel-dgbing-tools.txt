@@ -1,0 +1,7 @@
+procmon
+process explorer
+HxD
+winmerge
+vergilius
+diaphora
+bindiff

@@ -1,0 +1,35 @@
+Name                    type                                    purpose
+
+R0
+===
+driver.sys              kernel module                           driver calls
+EPROCESS                struct/object                           executive process pdb; pointer to KPROCESS, plus flags
+Executive               abstraction                             manages kernel operation sessions
+HAL                     abstraction                             abstracts hardware details, different HALs for different hardware
+IRQ                     struct                                  interrupt source, dest, type, and IRQL
+IRQL                    value (0-31)                            irq permission level, 0 is user/lowest
+KPROCESS                struct/object                           kernel process pdb
+KTHREAD                 struct                                  kernel thread TEB
+ntoskrnl.exe            sys process                             invoke kernel modules
+pool                    struct                                  kernelspace heaps
+SRM                     module                                  security reference monitor, manages security tokens
+token                   struct                                  runtime security permissions for object
+win32k.sys              kernel module                           windowing
+
+
+
+R3
+===
+crsss.exe               sys process                             client runtime server
+kernel32.dll            library                                 wrapper on ntdll.dll
+lsass.exe               sys process                             local security authority server
+lsm.exe                 sys process                             local session mgr
+ntdll.dll               library                                 library to handle system calls
+PEB                     struct                                  minimal pdb
+services.exe            sys process                             service control manager
+smss.exe                sys process                             session manager
+svchost.exe             sys process                             service hosting
+TEB                     struct                                  per-thread peb
+token                   struct                                  runtime security permissions for object
+winit.exe               sys process                             windows initialization
+winlogon.exe            sys process                             logon
