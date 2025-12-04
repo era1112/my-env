@@ -22,6 +22,7 @@ R3
 ===
 crsss.exe               sys process                             client runtime server
 kernel32.dll            library                                 wrapper on ntdll.dll
+kernelbase.dll          lib                                     application creation api
 lsass.exe               sys process                             local security authority server
 lsm.exe                 sys process                             local session mgr
 ntdll.dll               library                                 library to handle system calls

@@ -5,15 +5,21 @@ On debuggee:
 
 
 commands:
+!address xxx    list max info on member at addr xxh
 bl              list bp's
+dc poi(xx)      dereference pointer at xx, print as string
+dps xx!yy       print pointer symbol table of struct at xx!yy
 dx y            print memory at y, with formatting x (db most familiar)
+g               continue
 lm              list modules
     lm u            userland modules
     lm k            kernel modules
     lm f            list modules w/ fs path
+    lm m xx         list specifc module xx
     lm sm           sort alphabetically
     lm v            verbose
     lm a xxx        list module at mem addr xxx
+p               single step (si)
 t               take one step and print watch's
 sxe xx          break on exeception xx
     sxe -c ".lastevent" xx      break on exception xx and print useful "lastevent" info

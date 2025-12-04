@@ -1,0 +1,7 @@
+FLAIR expands into FLIRT signatures
+
+
+tools:
+    sigmake
+    pelf
+    makepat (IDA)
