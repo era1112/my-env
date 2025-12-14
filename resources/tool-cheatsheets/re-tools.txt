@@ -1,0 +1,31 @@
+ex dev
+    GEF (gdb enhanced features)
+    gh/gallopsled/pwntools
+    gh/shellphish/how2heap
+    heapME
+    oneGadget
+    pip/pwn
+    ropper
+
+ida scripting
+    IPyIDA (ipython + ida)
+    python -> idautils
+    pycharm + IDA
+    SARK
+
+analysis tools
+    checksec
+    diaphora
+    bindiff
+    bin navi
+    HxD
+    winmerge
+
+windows
+    procmon
+    process explorer
+    vergilius
+    https://idafchev.github.io/blog/Vulnerable_Driver_Part1/
+    Damn Vulnerable Driver    
+
+

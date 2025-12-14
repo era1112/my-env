@@ -3,14 +3,20 @@ Name                    type                                    purpose
 R0
 ===
 driver.sys              kernel module                           driver calls
+dxgkrnl.sys             driver                                  graphics driver
 EPROCESS                struct/object                           executive process pdb; pointer to KPROCESS, plus flags
 Executive               abstraction                             manages kernel operation sessions
-HAL                     abstraction                             abstracts hardware details, different HALs for different hardware
+GDI                     driver                                  graphics/windowing
+HAL.dll                 abstraction                             abstracts hardware details, different HALs for different hardware
 IRQ                     struct                                  interrupt source, dest, type, and IRQL
 IRQL                    value (0-31)                            irq permission level, 0 is user/lowest
 KPROCESS                struct/object                           kernel process pdb
 KTHREAD                 struct                                  kernel thread TEB
-ntoskrnl.exe            sys process                             invoke kernel modules
+ntoskrnl.exe            kernel image                            invoke kernel modules
+    ntkrnlmp                (old) kernel image
+    ntkrnlpa                (old) kernel image
+    ntkrpamp                (old) kernel image
+    ntkrla57                (new pml5) kernel image
 pool                    struct                                  kernelspace heaps
 SRM                     module                                  security reference monitor, manages security tokens
 token                   struct                                  runtime security permissions for object
@@ -34,3 +40,62 @@ TEB                     struct                                  per-thread peb
 token                   struct                                  runtime security permissions for object
 winit.exe               sys process                             windows initialization
 winlogon.exe            sys process                             logon
+
+
+
+u2k paths
+=========
+ntdll lib
+win32k/u libs
+
+
+kernel layers
+=============
+executive
+    objects mgmt
+    security
+    mem mgmt
+    IPC
+
+kernel
+    locking/synchro
+    scheduling, thread mgmt
+    interrupt dispatching
+    basic objects
+
+(pico/minimal processes on the side, no PEBs, other exceptions)
+
+mem
+===
+
+    Hardware
+
+0xffffffff`ffffffff
+
+    HAL
+    drivers
+    kernel
+    executive
+    GDI
+    (legacy) subsystems
+    dispatcher
+
+0xffff8000`00000000
+    
+PLE5 kernel extension
+
+0xff000000`00000000
+
+    non-canonical
+
+0x00ffffff`ffffffff
+
+    PLE5 userland extension
+
+0x00007fff`ffffffff
+
+    ntdll/win32u.dll
+    dlls
+    apps
+
+0x00000000`00000000
