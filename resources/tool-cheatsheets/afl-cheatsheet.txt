@@ -14,3 +14,14 @@
 	then run slave processes with: -S tag0x
 	use screen to manage all the processes
 	use afl-whatsup to monitor
+
+Terminology:
+	Corpus:		set of inputs
+	Mutator:	extends inputs
+	Generator:	generates inputs
+	Input
+	Executor:	Target execution mechanism
+	Observer
+	Feedback
+	Stage:		Stage in mult-stage fuzzing/harnessing
+	State:		Overall state of fuzzing process

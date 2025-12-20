@@ -6,6 +6,14 @@ ex dev
     oneGadget
     pip/pwn
     ropper
+    shell-storm.org/shellcode/index.html
+
+fuzzing
+    boofuzz
+    afl
+    peach fuzzer
+    honggfuzz
+    libfuzzer
 
 ida scripting
     IPyIDA (ipython + ida)
