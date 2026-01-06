@@ -1,3 +1,9 @@
+code coverage
+    DynamoRIO
+    frida
+    lighthouse
+    pin
+
 ex dev
     GEF (gdb enhanced features)
     gh/gallopsled/pwntools
@@ -11,6 +17,7 @@ ex dev
 fuzzing
     boofuzz
     afl
+    frida               instrumentation
     peach fuzzer
     honggfuzz
     libfuzzer
