@@ -1,3 +1,11 @@
+analysis tools
+    checksec
+    diaphora
+    bindiff
+    bin navi
+    HxD
+    winmerge
+
 code coverage
     DynamoRIO
     frida
@@ -21,6 +29,7 @@ fuzzing
     peach fuzzer
     honggfuzz
     libfuzzer
+    winnie              fork behavior on windows
 
 ida scripting
     IPyIDA (ipython + ida)
@@ -28,13 +37,23 @@ ida scripting
     pycharm + IDA
     SARK
 
-analysis tools
-    checksec
-    diaphora
-    bindiff
-    bin navi
-    HxD
-    winmerge
+metrics
+    new paths
+    executions per sec
+    total executions
+    total coverage (over time)
+    crashes/hangs/abnormal outputs
+    stability
+    fuzzbench (google)
+
+mutators
+    radasma
+    afl havoc
+    AST mutators
+    Grammar mutators
+        libprotobuf
+        domato
+        gramatron
 
 windows
     procmon

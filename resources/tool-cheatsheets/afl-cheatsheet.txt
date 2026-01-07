@@ -25,3 +25,7 @@ Terminology:
 	Feedback
 	Stage:		Stage in mult-stage fuzzing/harnessing
 	State:		Overall state of fuzzing process
+
+
+WinAFL:
+	needs to be compiled against current ver of DynamoRIO
