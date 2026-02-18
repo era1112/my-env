@@ -10,3 +10,8 @@
     message="${message:-$n_msg}" 
     curl -d "$message" "https://ntfy.sh/$endpoint" 
   }
+
+These work:
+  notify
+  notify "new msg"
+  notify "new msg" "new endpoint"
