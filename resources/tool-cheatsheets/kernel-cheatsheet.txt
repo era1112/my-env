@@ -1,0 +1,20 @@
+- Install dependencies
+    build-essential libelf-dev
+    
+- Back up existing kernel 
+    from /boot/<version>.config
+
+- Customize
+    sudo make menuconfig
+
+- Compile
+    sudo make -j<num processors> [use nproc to find out]
+
+- Add modules
+    sudo make INSTALL_MOD_STRIP=1 modules_install
+
+- Install on machine
+    sudo make install
+
+- Update grub
+    sudo update-grub2
