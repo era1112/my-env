@@ -1,0 +1,12 @@
+.bashrc >>
+  export n_endp="rygvvf4" 
+  export n_msg="done"
+
+  notify() { 
+    local message="$1" 
+    local endpoint="$2" 
+    
+    endpoint="${endpoint:-$n_endp}" 
+    message="${message:-$n_msg}" 
+    curl -d "$message" "https://ntfy.sh/$endpoint" 
+  }
