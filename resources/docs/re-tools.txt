@@ -29,6 +29,7 @@ fuzzing
     peach fuzzer
     honggfuzz
     libfuzzer
+    tinyinst            instrumentation
     winnie              fork behavior on windows
 
 ida scripting
